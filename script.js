@@ -4,9 +4,10 @@ gsap.to("#hero-subtitle", { opacity: 1, duration: 1.2, delay: 0.3 });
 
 // Projects data
 const projects = [
-  { title: "Neon Dashboard", desc: "Futuristic dashboard with animated glow UI", link: "#" },
-  { title: "Cyber Terminal", desc: "Animated terminal UI with GSAP", link: "#" },
-  { title: "Hologram UI", desc: "Glass + neon layered interface", link: "#" },
+  { title: "Moody", desc: "Finland Exchange Project", link: "projects/moody.html" },
+  { title: "Natuurmoment", desc: "Natuurmonumenten project", link: "projects/natuurMoment.html" },
+  { title: "Storyge", desc: "Cultural Game", link: "projects/storyge.html" },
+  { title: "Camaro's", desc: "A Laravel project about Camaro's", link: "projects/camaros.html" },
 ];
 
 const grid = document.getElementById("project-grid");

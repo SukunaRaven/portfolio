@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Details - Camaro's</title>
+
+  <!-- Bulma -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Neon Detail Styles -->
+  <link rel="stylesheet" href="project-details.css">
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar is-fixed-top custom-navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item neon-cyan has-text-weight-bold" href="../index.html">← Back</a>
+    </div>
+  </nav>
+
+  <!-- HEADER -->
+  <header class="project-header fade-in-hidden">
+    <div class="container has-text-centered">
+      <h1 class="title neon-glow" id="project-title">Camaro's Laravel Project</h1>
+      <h2 class="subtitle neon-purple" id="project-subtitle">A project that showcases Camaro's added by users of the website. It uses Laravel framework.</h2>
+    </div>
+  </header>
+
+  <!-- PROJECT IMAGE -->
+  <section class="section fade-in-hidden">
+    <div class="container project-image-container">
+      <img id="project-image" src="assets/images/project.jpg" alt="Project Image" class="project-image">
+    </div>
+  </section>
+
+  <!-- DESCRIPTION PANEL -->
+  <section class="section fade-in-hidden">
+    <div class="container bg-panel">
+      <h2 class="title is-3 neon-cyan">About The Project</h2>
+      <p id="project-description">
+        This project demonstrates a futuristic neon-style interface with animated glow elements.
+      </p>
+    </div>
+  </section>
+
+  <!-- TECHNOLOGIES -->
+  <section class="section fade-in-hidden">
+    <div class="container bg-panel">
+      <h2 class="title is-3 neon-purple">Technologies Used</h2>
+      <ul class="tech-list" id="tech-list"></ul>
+    </div>
+  </section>
+
+  <!-- GITHUB BUTTON -->
+  <section class="section fade-in-hidden has-text-centered">
+    <a id="github-link" href="#" target="_blank" class="button neon-button is-large">
+      View on GitHub
+    </a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer neon-footer">
+    <p>© 2026 Your Name — Futuristic Neon Portfolio</p>
+  </footer>
+
+  <script src="project-details.js"></script>
+</body>
+</html>
