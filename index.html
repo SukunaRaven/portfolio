@@ -19,11 +19,21 @@
 <body class="transition-colors duration-300">
     <div id="nav-container"></div>
 
+    <div class="fixed right-4 top-1/2 -translate-y-1/2 hidden lg:flex flex-col items-center gap-4 z-40">
+        <span class="text-[10px] font-mono text-slate-400 rotate-90 mb-4">SCALE_1:1</span>
+        <div class="h-64 w-[2px] bg-slate-200 dark:bg-slate-800 relative overflow-hidden rounded-full">
+            <div id="scroll-indicator" class="absolute top-0 left-0 w-full bg-indigo-600 transition-all duration-150">
+            </div>
+        </div>
+        <span id="scroll-percentage" class="text-[10px] font-mono text-slate-400 mt-4">00%</span>
+    </div>
+
     <section class="pt-32 pb-20 px-6 max-w-7xl mx-auto">
         <h1 class="text-5xl md:text-8xl font-extrabold tracking-tighter mb-6" data-i18n="hero-title">.</h1>
         <p class="text-xl md:text-2xl text-slate-500 dark:text-slate-400 max-w-3xl leading-relaxed"
             data-i18n="hero-sub">
         </p>
+
     </section>
 
     <section id="work" class="px-6 py-20 max-w-7xl mx-auto">
@@ -31,15 +41,36 @@
             <h2 class="text-3xl font-bold uppercase tracking-widest text-indigo-600" data-i18n="nav-work">
             </h2>
         </div>
-        <div id="project-grid" class="grid grid-cols-1 md:grid-cols-2 gap-12"></div>
+        <div id="project-grid" class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        </div>
     </section>
 
+    <div class="flex items-center gap-3 opacity-30 hover:opacity-100 transition-opacity cursor-default">
+        <div
+            class="w-10 h-10 border border-slate-400 dark:border-slate-600 rounded-full flex items-center justify-center italic font-black text-xs">
+            R.
+        </div>
+        <div class="text-[9px] uppercase tracking-[0.3em] leading-tight">
+            Certified System Architect<br>
+            <span class="text-indigo-600">Authenticated 2026</span>
+        </div>
+    </div>
     <div id="footer-container"></div>
 
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="js/data.js"></script>
     <script src="js/components.js"></script>
     <script src="js/main.js"></script>
+
+    <div
+        class="fixed bottom-8 left-8 hidden 2xl:block font-mono text-[10px] leading-tight text-slate-400 uppercase tracking-widest z-50">
+        <div class="flex items-center gap-2 mb-1">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span>Protocol: EHBO_READY</span>
+        </div>
+        <div class="mb-1">Compliance: GDPR_ENFORCED</div>
+        <div>Jurisdiction: NL_EU_2026</div>
+    </div>
 </body>
 
 </html>

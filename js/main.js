@@ -24,6 +24,29 @@ function updateThemeUI() {
     }
 }
 
+function updateFootnotes() {
+    const fnTranslations = {
+        en: {
+            "fn-gdpr": "Ref: Art. 5 GDPR - Data Minimization Protocol.",
+            "fn-ehbo": "Cert: EHBO/BHV - First Responder Active Status.",
+            "fn-compliance": "Protocol: WCAG 2.1 / Accessibility Audit Passed."
+        },
+        nl: {
+            "fn-gdpr": "Ref: Art. 5 AVG - Dataminimalisatie Protocol.",
+            "fn-ehbo": "Cert: EHBO/BHV - Status: Actieve Eerste Hulpverlener.",
+            "fn-compliance": "Protocol: WCAG 2.1 / Toegankelijkheidstest geslaagd."
+        }
+    };
+
+    document.querySelectorAll('[data-i18n-fn]').forEach(el => {
+        const key = el.getAttribute('data-i18n-fn');
+        const lang = window.currentLang || 'en';
+        if (fnTranslations[lang][key]) {
+            el.setAttribute('data-footnote', fnTranslations[lang][key]);
+        }
+    });
+}
+
 function init() {
     // A. Initial Theme Check
     const savedTheme = localStorage.getItem('theme');
@@ -59,8 +82,21 @@ function init() {
         }
     });
 
+    window.addEventListener('scroll', () => {
+        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (winScroll / height) * 100;
+
+        const indicator = document.getElementById('scroll-indicator');
+        const percentLabel = document.getElementById('scroll-percentage');
+
+        if (indicator) indicator.style.height = scrolled + "%";
+        if (percentLabel) percentLabel.innerText = Math.round(scrolled).toString().padStart(2, '0') + "%";
+    });
+
     // E. Sync UI Icons
     updateThemeUI();
+    updateFootnotes();
 }
 
 // Update renderHome to show thumbnails on the main page too
@@ -123,6 +159,7 @@ function renderDetails() {
 
         if (window.lucide) lucide.createIcons();
     }
+
 }
 
 document.addEventListener('DOMContentLoaded', init);

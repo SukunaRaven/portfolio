@@ -7,7 +7,6 @@
     <title>About Me | Raven</title>
 
     <script>
-        // Prevent white flash by applying theme BEFORE body renders
         if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             document.documentElement.classList.add('dark');
         }
@@ -23,58 +22,113 @@
 
     <div id="nav-container"></div>
 
+    <div class="fixed right-4 top-1/2 -translate-y-1/2 hidden lg:flex flex-col items-center gap-4 z-40">
+        <span class="text-[10px] font-mono text-slate-400 rotate-90 mb-4">SCALE_1:1</span>
+        <div class="h-64 w-[2px] bg-slate-200 dark:bg-slate-800 relative overflow-hidden rounded-full">
+            <div id="scroll-indicator" class="absolute top-0 left-0 w-full bg-indigo-600 transition-all duration-150">
+            </div>
+        </div>
+        <span id="scroll-percentage" class="text-[10px] font-mono text-slate-400 mt-4">00%</span>
+    </div>
+
+    <div class="fixed left-4 top-1/4 hidden 2xl:block opacity-20 hover:opacity-100 transition-opacity duration-500">
+        <div class="flex flex-col gap-12 border-l border-slate-300 dark:border-slate-700 pl-4">
+            <div class="group cursor-help">
+                <p class="text-[10px] font-bold tracking-[0.2em] text-indigo-600 uppercase mb-1">Status</p>
+                <p class="text-xs font-mono">SYSTEM_READY</p>
+            </div>
+            <div class="group cursor-help">
+                <p class="text-[10px] font-bold tracking-[0.2em] text-red-500 uppercase mb-1">Safety</p>
+                <p class="text-xs font-mono">EHBO_CERT_VALID</p>
+            </div>
+            <div class="group cursor-help">
+                <p class="text-[10px] font-bold tracking-[0.2em] text-amber-500 uppercase mb-1">Compliance</p>
+                <p class="text-xs font-mono">GDPR_ALIGNED</p>
+            </div>
+        </div>
+    </div>
+
     <main class="pt-40 pb-32 px-6 max-w-5xl mx-auto page-enter">
         <section class="mb-24">
             <h1 class="text-5xl md:text-8xl font-extrabold tracking-tighter mb-8" data-i18n="about-head"></h1>
-            <p class="text-xl md:text-2xl text-slate-500 dark:text-slate-400 max-w-3xl leading-relaxed" data-i18n="about-bio"></p>
+            <p class="text-xl md:text-2xl text-slate-500 dark:text-slate-400 max-w-3xl leading-relaxed"
+                data-i18n="about-bio"></p>
         </section>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-16 mb-32">
             <div class="md:col-span-2 space-y-20">
                 <div>
-                    <h2 class="text-2xl font-bold uppercase tracking-[0.2em] text-indigo-600 mb-8" data-i18n="skills-title"></h2>
+                    <h2 class="text-2xl font-bold uppercase tracking-[0.2em] text-indigo-600 mb-8"
+                        data-i18n="skills-title"></h2>
                     <div id="tech-skills" class="flex flex-wrap gap-3"></div>
                 </div>
 
                 <div>
-                    <h2 class="text-xl font-bold uppercase tracking-[0.2em] text-indigo-600 mb-8" data-i18n="lang-title"></h2>
+                    <h2 class="text-xl font-bold uppercase tracking-[0.2em] text-indigo-600 mb-8"
+                        data-i18n="lang-title"></h2>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         <div
                             class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
-                            <span class="block font-bold text-slate-900 dark:text-white text-lg" data-i18n="lang-en"></span>
-                            <span class="text-xs dark:text-slate-200 uppercase tracking-wider font-semibold" data-i18n="level-fluent"></span>
+                            <span class="block font-bold text-slate-900 dark:text-white text-lg"
+                                data-i18n="lang-en"></span>
+                            <span class="text-xs dark:text-slate-200 uppercase tracking-wider font-semibold"
+                                data-i18n="level-fluent"></span>
                         </div>
                         <div
                             class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
-                            <span class="block font-bold text-slate-900 dark:text-white text-lg" data-i18n="lang-nl"></span>
-                            <span class="text-xs dark:text-slate-200 uppercase tracking-wider font-semibold" data-i18n="level-native"></span>
+                            <span class="block font-bold text-slate-900 dark:text-white text-lg"
+                                data-i18n="lang-nl"></span>
+                            <span class="text-xs dark:text-slate-200 uppercase tracking-wider font-semibold"
+                                data-i18n="level-native"></span>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="space-y-8">
-                <h2 class="text-2xl font-bold uppercase tracking-[0.2em] text-indigo-600 mb-8" data-i18n="cert-title"></h2>
+                <h2 class="text-2xl font-bold uppercase tracking-[0.2em] text-indigo-600 mb-8" data-i18n="cert-title">
+                </h2>
 
                 <div
-                    class="group p-8 rounded-3xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-indigo-500 transition-all">
-                    <i data-lucide="scale" class="w-6 h-6 mb-6 text-indigo-600"></i>
-                    <h3 class="font-bold text-lg mb-2 text-slate-900 dark:text-white" data-i18n="cert-law"></h3>
-                    <p class="text-sm dark:text-slate-200 leading-relaxed" data-i18n="cert-law-desc"></p>
+                    class="group relative p-8 rounded-3xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-indigo-500 transition-all overflow-hidden">
+                    <div class="relative z-10">
+                        <i data-lucide="scale" class="w-6 h-6 mb-6 text-indigo-600"></i>
+                        <h3 class="font-bold text-lg mb-2 text-slate-900 dark:text-white" data-i18n="cert-law"></h3>
+                        <p class="text-sm dark:text-slate-200 leading-relaxed" data-i18n="cert-law-desc"></p>
+                    </div>
+                    <svg class="absolute -bottom-2 -right-4 w-32 h-32 opacity-5 dark:opacity-10 pointer-events-none group-hover:opacity-20 transition-opacity rotate-12"
+                        viewBox="0 0 100 100">
+                        <path d="M10,80 Q30,20 50,70 T90,30" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" class="text-indigo-500" />
+                    </svg>
                 </div>
 
                 <div
-                    class="group p-8 rounded-3xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-indigo-500 transition-all">
-                    <i data-lucide="heart-pulse" class="w-6 h-6 mb-6 text-red-500"></i>
-                    <h3 class="font-bold text-lg mb-2 text-slate-900 dark:text-white" data-i18n="cert-ehbo"></h3>
-                    <p class="text-sm dark:text-slate-200 leading-relaxed" data-i18n="cert-ehbo-desc"></p>
+                    class="group relative p-8 rounded-3xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-red-500 transition-all overflow-hidden">
+                    <div class="relative z-10">
+                        <i data-lucide="heart-pulse" class="w-6 h-6 mb-6 text-red-500"></i>
+                        <h3 class="font-bold text-lg mb-2 text-slate-900 dark:text-white" data-i18n="cert-ehbo"></h3>
+                        <p class="text-sm dark:text-slate-200 leading-relaxed" data-i18n="cert-ehbo-desc"></p>
+                    </div>
+                    <svg class="absolute -bottom-2 -right-4 w-32 h-32 opacity-5 dark:opacity-10 pointer-events-none group-hover:opacity-20 transition-opacity"
+                        viewBox="0 0 100 100">
+                        <path d="M10,50 L30,50 L40,20 L55,80 L70,50 L90,50" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" class="text-red-500" />
+                    </svg>
                 </div>
 
                 <div
-                    class="group p-8 rounded-3xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-indigo-500 transition-all">
-                    <i data-lucide="hand" class="w-6 h-6 mb-6 text-amber-500"></i>
-                    <h3 class="font-bold text-lg mb-2 text-slate-900 dark:text-white" data-i18n="cert-sign"></h3>
-                    <p class="text-sm dark:text-slate-200 leading-relaxed" data-i18n="cert-sign-desc"></p>
+                    class="group relative p-8 rounded-3xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-amber-500 transition-all overflow-hidden">
+                    <div class="relative z-10">
+                        <i data-lucide="hand" class="w-6 h-6 mb-6 text-amber-500"></i>
+                        <h3 class="font-bold text-lg mb-2 text-slate-900 dark:text-white" data-i18n="cert-sign"></h3>
+                        <p class="text-sm dark:text-slate-200 leading-relaxed" data-i18n="cert-sign-desc"></p>
+                    </div>
+                    <svg class="absolute -bottom-2 -right-4 w-32 h-32 opacity-5 dark:opacity-10 pointer-events-none group-hover:opacity-20 transition-opacity"
+                        viewBox="0 0 100 100">
+                        <circle cx="50" cy="50" r="30" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-dasharray="180" class="text-amber-500 rotate-45" />
+                    </svg>
                 </div>
             </div>
         </div>
@@ -82,7 +136,8 @@
         <hr class="border-slate-200 dark:border-slate-800 mb-24">
 
         <section class="mb-32">
-            <h2 class="text-2xl font-bold uppercase tracking-[0.2em] text-indigo-600 mb-12" data-i18n="philosophy-title">
+            <h2 class="text-2xl font-bold uppercase tracking-[0.2em] text-indigo-600 mb-12"
+                data-i18n="philosophy-title">
             </h2>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16">
@@ -124,6 +179,16 @@
             if (window.lucide) lucide.createIcons();
         });
     </script>
+
+    <div
+        class="fixed bottom-8 left-8 hidden 2xl:block font-mono text-[10px] leading-tight text-slate-400 uppercase tracking-widest z-50">
+        <div class="flex items-center gap-2 mb-1">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span>Protocol: EHBO_READY</span>
+        </div>
+        <div class="mb-1">Compliance: GDPR_ENFORCED</div>
+        <div>Jurisdiction: NL_EU_2026</div>
+    </div>
 </body>
 
 </html>

@@ -16,13 +16,14 @@ const components = {
                             <i data-lucide="moon" class="theme-icon w-5 h-5"></i>
                         </button>
 
-                        <button onclick="window.toggleLang()" class="hover:text-indigo-600 transition">
-                            ${lang === 'en' ? 'NL' : 'EN'}
+                        <button onclick="window.toggleLang()" class="group flex items-center gap-2 hover:text-indigo-600 transition">
+                            <i data-lucide="languages" class="w-4 h-4 text-slate-400 group-hover:text-indigo-600"></i>
+                            <span class="font-bold tracking-tighter">${lang.toUpperCase()}</span>
                         </button>
                     </div>
                     <ul class="flex gap-6 text-xs font-bold uppercase tracking-widest text-inherit">
-                    <li><a href="index.html#work" data-i18n="nav-work" class="hover:text-indigo-600 transition">Work</a></li>
-                    <li><a href="about.html" data-i18n="nav-about" class="hover:text-indigo-600 transition">About</a></li>
+                        <li><a href="index.html#work" data-i18n="nav-work" class="hover:text-indigo-600 transition">Work</a></li>
+                        <li><a href="about.html" data-i18n="nav-about" class="hover:text-indigo-600 transition">About</a></li>
                     </ul>
                 </div>
             </div>

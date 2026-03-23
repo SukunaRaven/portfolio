@@ -17,8 +17,23 @@ body {
     color: var(--text-main) !important;
     font-family: 'Inter', sans-serif;
     transition: background-color 0.3s, color 0.3s;
+    background-image: 
+        radial-gradient(var(--border-color) 1px, transparent 0);
+    background-size: 40px 40px; 
+    background-attachment: fixed;
 }
 
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--bg-page), transparent 150px);
+    pointer-events: none;
+    z-index: -1;
+}
 
 h1, h2, h3, h4, p, span, a {
     color: inherit;
@@ -29,16 +44,104 @@ h1, h2, h3, h4, p, span, a {
 
 .glass {
     background-color: rgba(var(--bg-page), 0.8);
-    backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
     border-color: var(--border-color) !important;
 }
 
-/* This forces the image to fill the container perfectly */
 #det-image-container img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* This is the key: no stretching, just cropping */
-    object-position: center; /* Keeps the middle of the image visible */
+    object-fit: cover; 
+    object-position: center; 
     display: block;
 }
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.dark .bg-slate-700 {
+    box-shadow: 0 0 10px rgba(79, 70, 229, 0.1);
+}
+
+.legal-footnote {
+    position: relative;
+    cursor: help;
+    color: #4f46e5;
+    border-bottom: 1px dashed #4f46e5;
+    font-weight: 600;
+}
+
+.legal-footnote::after {
+    content: attr(data-footnote);
+    position: absolute;
+    bottom: 150%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    
+    width: 220px;
+    padding: 12px;
+    background: #ffffff;
+    color: #0f172a;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 10px;
+    line-height: 1.4;
+    text-transform: uppercase;
+    text-align: left;
+    
+    border: 1px solid #e2e8f0;
+    box-shadow: 8px 8px 0px rgba(79, 70, 229, 0.1);
+    
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 100;
+    pointer-events: none;
+}
+
+.legal-footnote::before {
+    content: '';
+    position: absolute;
+    bottom: 130%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 8px 8px 0 8px;
+    border-style: solid;
+    border-color: #e2e8f0 transparent transparent transparent;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 101;
+}
+
+.legal-footnote:hover::after,
+.legal-footnote:hover::before {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.dark .legal-footnote::after {
+    background: #1e293b;
+    color: #f1f5f9;
+    border-color: #334155;
+    box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes draw-path {
+    from { stroke-dashoffset: 200; }
+    to { stroke-dashoffset: 0; }
+}
+
+.group:hover svg path, 
+.group:hover svg circle {
+    stroke-dasharray: 200;
+    animation: draw-path 1.2s ease-out forwards;
+}
+
