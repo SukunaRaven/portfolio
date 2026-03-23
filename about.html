@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | Raven</title>
+
+    <script>
+        // Prevent white flash by applying theme BEFORE body renders
+        if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        }
+        window.tailwind = { config: { darkMode: 'class' } }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body class="transition-colors duration-300">
+
+    <div id="nav-container"></div>
+
+    <main class="pt-40 pb-32 px-6 max-w-5xl mx-auto page-enter">
+        <section class="mb-24">
+            <h1 class="text-5xl md:text-8xl font-extrabold tracking-tighter mb-8" data-i18n="about-head"></h1>
+            <p class="text-xl md:text-2xl text-slate-500 dark:text-slate-400 max-w-3xl leading-relaxed" data-i18n="about-bio"></p>
+        </section>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-16 mb-32">
+            <div class="md:col-span-2 space-y-20">
+                <div>
+                    <h2 class="text-2xl font-bold uppercase tracking-[0.2em] text-indigo-600 mb-8" data-i18n="skills-title"></h2>
+                    <div id="tech-skills" class="flex flex-wrap gap-3"></div>
+                </div>
+
+                <div>
+                    <h2 class="text-xl font-bold uppercase tracking-[0.2em] text-indigo-600 mb-8" data-i18n="lang-title"></h2>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div
+                            class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+                            <span class="block font-bold text-slate-900 dark:text-white text-lg" data-i18n="lang-en"></span>
+                            <span class="text-xs dark:text-slate-200 uppercase tracking-wider font-semibold" data-i18n="level-fluent"></span>
+                        </div>
+                        <div
+                            class="p-6 rounded-2xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+                            <span class="block font-bold text-slate-900 dark:text-white text-lg" data-i18n="lang-nl"></span>
+                            <span class="text-xs dark:text-slate-200 uppercase tracking-wider font-semibold" data-i18n="level-native"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-8">
+                <h2 class="text-2xl font-bold uppercase tracking-[0.2em] text-indigo-600 mb-8" data-i18n="cert-title"></h2>
+
+                <div
+                    class="group p-8 rounded-3xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-indigo-500 transition-all">
+                    <i data-lucide="scale" class="w-6 h-6 mb-6 text-indigo-600"></i>
+                    <h3 class="font-bold text-lg mb-2 text-slate-900 dark:text-white" data-i18n="cert-law"></h3>
+                    <p class="text-sm dark:text-slate-200 leading-relaxed" data-i18n="cert-law-desc"></p>
+                </div>
+
+                <div
+                    class="group p-8 rounded-3xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-indigo-500 transition-all">
+                    <i data-lucide="heart-pulse" class="w-6 h-6 mb-6 text-red-500"></i>
+                    <h3 class="font-bold text-lg mb-2 text-slate-900 dark:text-white" data-i18n="cert-ehbo"></h3>
+                    <p class="text-sm dark:text-slate-200 leading-relaxed" data-i18n="cert-ehbo-desc"></p>
+                </div>
+
+                <div
+                    class="group p-8 rounded-3xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-indigo-500 transition-all">
+                    <i data-lucide="hand" class="w-6 h-6 mb-6 text-amber-500"></i>
+                    <h3 class="font-bold text-lg mb-2 text-slate-900 dark:text-white" data-i18n="cert-sign"></h3>
+                    <p class="text-sm dark:text-slate-200 leading-relaxed" data-i18n="cert-sign-desc"></p>
+                </div>
+            </div>
+        </div>
+
+        <hr class="border-slate-200 dark:border-slate-800 mb-24">
+
+        <section class="mb-32">
+            <h2 class="text-2xl font-bold uppercase tracking-[0.2em] text-indigo-600 mb-12" data-i18n="philosophy-title">
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16">
+                <div class="space-y-4">
+                    <h3 class="text-xl font-bold" data-i18n="phil-security-head"></h3>
+                    <p class="leading-relaxed text-sm md:text-base" data-i18n="phil-security-desc"></p>
+                </div>
+
+                <div class="space-y-4">
+                    <h3 class="text-xl font-bold" data-i18n="phil-perf-head"></h3>
+                    <p class="leading-relaxed text-sm md:text-base" data-i18n="phil-perf-desc"></p>
+                </div>
+
+                <div class="space-y-4">
+                    <h3 class="text-xl font-bold" data-i18n="phil-access-head"></h3>
+                    <p class="leading-relaxed text-sm md:text-base" data-i18n="phil-access-desc"></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-container"></div>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="js/data.js"></script>
+    <script src="js/components.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const skills = ['HTML', 'CSS', 'JavaScript', 'Tailwind', 'Node.js', 'React', 'Git', 'UI/UX Design', 'Laravel', 'MongoDB', 'AI Development', 'Express', 'TypeScript', 'MySQL'];
+            const container = document.getElementById('tech-skills');
+
+            container.innerHTML = skills.map(s => `
+            <span class="px-4 py-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl text-sm font-semibold text-slate-900 dark:text-white transition-colors">
+                ${s}
+            </span>
+        `).join('');
+
+            if (window.lucide) lucide.createIcons();
+        });
+    </script>
+</body>
+
+</html>

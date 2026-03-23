@@ -1,177 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Futuristic Neon Portfolio</title>
-
-  <!-- Bulma CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Orbitron:wght@400;600;700&display=swap" rel="stylesheet">
-
-  <!-- Neon CSS (external) -->
-  <link rel="stylesheet" href="style.css">
-
-  <!-- GSAP -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Raven</title>
+    <script>
+        if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        }
+        window.tailwind = { config: { darkMode: 'class' } }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
-<body>
 
-  <!-- NAVBAR -->
-  <nav class="navbar is-fixed-top custom-navbar">
-    <div class="navbar-brand">
-      <a class="navbar-item neon-cyan has-text-weight-bold">Portfolio</a>
-    </div>
-    <div class="navbar-menu">
-      <div class="navbar-end pr-4">
-        <a href="#hero" class="navbar-item">Home</a>
-        <a href="#about" class="navbar-item">About</a>
-        <a href="#skills" class="navbar-item">Skills</a>
-        <a href="#projects" class="navbar-item">Projects</a>
-        <a href="#timeline" class="navbar-item">Experience</a>
-        <a href="#contact" class="navbar-item">Contact</a>
-      </div>
-    </div>
-  </nav>
+<body class="transition-colors duration-300">
+    <div id="nav-container"></div>
 
-  <!-- HERO -->
-  <section id="hero" class="hero is-fullheight has-text-centered">
-    <div class="hero-body">
-      <div class="container">
-        <h1 id="hero-title" class="title is-1 neon-glow fade-in-hidden">
-          Hi, I'm <span class="neon-cyan">Raven</span>
-        </h1>
-        <h2 id="hero-subtitle" class="subtitle is-3 fade-in-hidden">
-          Developer • Designer • Creator
-        </h2>
-
-        <div class="buttons is-centered mt-6">
-          <a href="#projects" class="button neon-button">View Projects</a>
-          <a href="#" class="button neon-button">Download CV</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about">
-    <div class="container">
-      <h2 class="title is-2 neon-cyan has-text-centered mb-6">About Me</h2>
-      <div class="bg-panel">
-        <p>
-          I create digital experiences with neon, cyber aesthetics and high interactivity.
+    <section class="pt-32 pb-20 px-6 max-w-7xl mx-auto">
+        <h1 class="text-5xl md:text-8xl font-extrabold tracking-tighter mb-6" data-i18n="hero-title">.</h1>
+        <p class="text-xl md:text-2xl text-slate-500 dark:text-slate-400 max-w-3xl leading-relaxed"
+            data-i18n="hero-sub">
         </p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- SKILLS -->
-  <section id="skills">
-    <div class="container">
-      <h2 class="title is-2 neon-purple has-text-centered mb-6">Skills</h2>
-
-      <div class="columns is-multiline">
-        <div class="column is-one-quarter">
-          <div class="neon-card">
-            <h3 class="title is-4 neon-cyan">Frontend</h3>
-            <ul>
-              <li>HTML / CSS</li>
-              <li>JavaScript</li>
-              <li>Bulma</li>
-              <li>Tailwind</li>
-            </ul>
-          </div>
+    <section id="work" class="px-6 py-20 max-w-7xl mx-auto">
+        <div class="flex justify-between items-end mb-12">
+            <h2 class="text-3xl font-bold uppercase tracking-widest text-indigo-600" data-i18n="nav-work">
+            </h2>
         </div>
+        <div id="project-grid" class="grid grid-cols-1 md:grid-cols-2 gap-12"></div>
+    </section>
 
-        <div class="column is-one-quarter">
-          <div class="neon-card">
-            <h3 class="title is-4 neon-cyan">Backend</h3>
-            <ul>
-              <li>Express</li>
-              <li>PHP</li>
-              <li>MySQL</li>
-              <li>Laravel</li>
-            </ul>
-          </div>
-        </div>
+    <div id="footer-container"></div>
 
-        <div class="column is-one-quarter">
-          <div class="neon-card">
-            <h3 class="title is-4 neon-cyan">Design</h3>
-            <ul>
-              <li>Figma</li>
-              <li>Prototyping</li>
-              <li>LucidChart</li>
-              <li>PowerPoint</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="column is-one-quarter">
-          <div class="neon-card">
-            <h3 class="title is-4 neon-cyan">Tools</h3>
-            <ul>
-              <li>GitHub</li>
-              <li>VS Code</li>
-              <li>PhPstorm</li>
-              <li>Postman</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- PROJECTS -->
-  <section id="projects">
-    <div class="container">
-      <h2 class="title is-2 neon-cyan has-text-centered mb-6">Projects</h2>
-      <div class="columns is-multiline" id="project-grid"></div>
-    </div>
-  </section>
-
-  <!-- TIMELINE -->
-  <section id="timeline">
-    <div class="container">
-      <h2 class="title is-2 neon-purple has-text-centered mb-6">Experience</h2>
-
-
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact">
-    <div class="container">
-      <h2 class="title is-2 neon-cyan has-text-centered mb-6">Contact</h2>
-
-      <form class="contact-box">
-        <div class="field">
-          <label class="label">Name</label>
-          <input class="input" type="text" placeholder="Your name">
-        </div>
-        <div class="field">
-          <label class="label">Email</label>
-          <input class="input" type="email" placeholder="Your email">
-        </div>
-        <div class="field">
-          <label class="label">Message</label>
-          <textarea class="textarea" placeholder="Your message"></textarea>
-        </div>
-        <button class="button neon-button">Send</button>
-      </form>
-
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer neon-footer">
-    <p>© 2026 Raven — Futuristic Neon Portfolio</p>
-  </footer>
-
-  <script src="script.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="js/data.js"></script>
+    <script src="js/components.js"></script>
+    <script src="js/main.js"></script>
 </body>
+
 </html>
