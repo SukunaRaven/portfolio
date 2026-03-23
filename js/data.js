@@ -2,7 +2,7 @@ const projectData = [
     {
         title: "Storyge",
         url: "https://github.com/AngryPapayah/cle4-storyge",
-        image: "../images/Logo.jpg",
+        image: "images/Logo.jpg",
         tags: ["JavaScript", "Excalibur"],
         desc: { 
             en: "An interactive storytelling experience built on the Excalibur engine. Storyge blends the 'unboxing' aesthetic with academic challenge; players navigate a digital space where progression is earned. Special narrative items are only unlocked through the successful completion of contextual quizzes, merging traditional gameplay with active knowledge retrieval.",
@@ -12,7 +12,7 @@ const projectData = [
     {
         title: "NatuurMoment",
         url: "https://github.com/HenkHR/NatuurMoment",
-        image: "../images/logoNM.png",
+        image: "images/logoNM.png",
         tags: ["Laravel", "Tailwind"],
         desc: { 
             en: "NatuurMoment redefines environmental education by gamifying the transition between the digital and physical worlds. Through interactive 'Nature Bingo' and location-aware route challenges, the platform transforms family days and theme events into immersive outdoor adventures. It’s a multi-generational bridge that utilizes high-performance mapping to foster ecological curiosity.",
@@ -22,7 +22,7 @@ const projectData = [
     {
         title: "Merai",
         url: "https://github.com/SukunaRaven/merai",
-        image: "../images/TLE3-Mera-LogoIcon.png",
+        image: "images/TLE3-Mera-LogoIcon.png",
         tags: ["React", "AI", "Tailwind"],
         desc: { 
             en: "A conceptual AI tool designed to visualize 'The Bubble.' Merai analyzes YouTube subscription metadata to demonstrate how easily algorithms categorize users into digital boxes. Built to educate families on data privacy, it transforms abstract data points into a visual representation of what the internet thinks it knows about you.",
@@ -32,7 +32,7 @@ const projectData = [
     {
         title: "Camaros",
         url: "https://github.com/SukunaRaven/camaros",
-        image: "../images/Camaro.png",
+        image: "images/Camaro.png",
         tags: ["Laravel", "Tailwind"],
         desc: { 
             en: "A robust automotive platform where the primary challenge was the architecture of access. Beyond the public-facing showcase, the core of the project is a complex administrative ecosystem. I engineered a strict permissions-based backend to ensure sensitive data and management tools remain securely locked behind multi-layered authentication.",
@@ -42,7 +42,7 @@ const projectData = [
     {
         title: "Moody",
         url: "https://github.com/SukunaRaven/moody",
-        image: "../images/moody-chatbot.png",
+        image: "images/moody-chatbot.png",
         tags: ["Python", "React", "AI", "Tailwind", "Typescript"],
         desc: { 
             en: "An AI-driven companion designed for emotional intelligence. Moody utilizes Python-based sentiment analysis and a sleek TypeScript/React frontend to track and support psychological well-being. It’s a testament to the power of technology as a tool for empathy, providing users with a safe space for reflection and growth.",
@@ -52,7 +52,7 @@ const projectData = [
     {
         title: "Signatuur Opdracht",
         url: "https://github.com/SukunaRaven/signatuur-opdracht",
-        image: "../images/signatuuropdracht.png",
+        image: "images/signatuuropdracht.png",
         tags: ["HTML", "CSS", "JavaScript"],
         desc: { 
             en: "A living document of technical growth. Signatuur Opdracht serves as a personal development framework tracking my evolution through the second year of my software engineering studies. It represents the transition from writing code that works to architecting systems that scale, acting as a signature of my personal coding standards and aesthetic progress.",
