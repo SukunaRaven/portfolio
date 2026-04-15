@@ -5,8 +5,8 @@ const projectData = [
         image: "images/Logo.jpg",
         tags: ["JavaScript", "Excalibur"],
         desc: { 
-            en: "An interactive storytelling experience built on the Excalibur engine. Storyge blends the 'unboxing' aesthetic with academic challenge; players navigate a digital space where progression is earned. Special narrative items are only unlocked through the successful completion of contextual quizzes, merging traditional gameplay with active knowledge retrieval.",
-            nl: "Een interactieve storytelling-ervaring gebouwd op de Excalibur-engine. Storyge combineert de 'unboxing' esthetiek met academische uitdaging; spelers navigeren door een digitale ruimte waar progressie moet worden verdiend. Speciale verhaalelementen worden pas ontgrendeld na het succesvol voltooien van contextuele quizvragen, waarbij traditionele gameplay wordt samengevoegd met actieve kennisoverdracht."
+            en: "Interactive storytelling meets unboxing. Built on Excalibur, Storyge isn't just a game—it's a digital puzzle box. You can’t just click through; you have to prove you’ve been paying attention. I linked narrative progression to contextual quizzes, making sure every item you unlock feels earned.",
+            nl: "Interactieve storytelling ontmoet de 'unboxing' trend. Gebouwd op de Excalibur-engine, is Storyge meer dan een game: het is een digitale puzzelbox. Je klikt er niet zomaar doorheen; je moet bewijzen dat je oplet. Ik heb voortgang gekoppeld aan quizvragen, zodat elk verhaalitem dat je vrijspeelt ook echt voelt als een beloning."
         }
     },
     {
@@ -15,8 +15,8 @@ const projectData = [
         image: "images/logoNM.png",
         tags: ["Laravel", "Tailwind"],
         desc: { 
-            en: "NatuurMoment redefines environmental education by gamifying the transition between the digital and physical worlds. Through interactive 'Nature Bingo' and location-aware route challenges, the platform transforms family days and theme events into immersive outdoor adventures. It’s a multi-generational bridge that utilizes high-performance mapping to foster ecological curiosity.",
-            nl: "NatuurMoment herdefinieert natuureducatie door de overgang tussen de digitale en fysieke wereld te gamificeren. Via interactieve 'Natuur Bingo' en locatiegebonden routevragen transformeert het platform familiedagen en thema-events tot meeslepende buitenavonturen. Het is een intergenerationele brug die hoogwaardige mapping inzet om ecologische nieuwsgierigheid te stimuleren."
+            en: "Getting people off their couches and into the woods. NatuurMoment gamifies the outdoors with 'Nature Bingo' and GPS-tracked routes. I focused on making the mapping high-performance and the experience simple enough for kids but engaging enough for parents. It's tech that actually encourages you to look away from your screen.",
+            nl: "Mensen van de bank en het bos in krijgen. NatuurMoment maakt de natuur leuker met 'Natuur Bingo' en GPS-routes. De uitdaging? Razendsnelle kaarten en een interface die simpel genoeg is voor kinderen, maar uitdagend genoeg voor hun ouders. Tech die je juist motiveert om níét naar je scherm te staren."
         }
     },
     {
@@ -25,8 +25,8 @@ const projectData = [
         image: "images/TLE3-Mera-LogoIcon.png",
         tags: ["React", "AI", "Tailwind"],
         desc: { 
-            en: "A conceptual AI tool designed to visualize 'The Bubble.' Merai analyzes YouTube subscription metadata to demonstrate how easily algorithms categorize users into digital boxes. Built to educate families on data privacy, it transforms abstract data points into a visual representation of what the internet thinks it knows about you.",
-            nl: "Een conceptuele AI-tool ontworpen om 'De Bubbel' te visualiseren. Merai analyseert YouTube-abonnementen om te demonstreren hoe eenvoudig algoritmen gebruikers in digitale hokjes plaatsen. Gebouwd om families bewust te maken van dataprivacy, transformeert het abstracte datapunten naar een visuele weergave van wat het internet over jou denkt te weten."
+            en: "Ever wondered how YouTube’s algorithm sees you? Merai peeks inside 'The Bubble.' By analyzing subscription metadata, it visualizes the digital boxes we get put into. It’s a tool built to spark conversations about data privacy—turning abstract code into a mirror of your digital identity.",
+            nl: "Ooit afgevraagd hoe het YouTube-algoritme naar je kijkt? Merai laat het je zien. Door metadata van abonnementen te analyseren, visualiseren we de digitale hokjes waar je in wordt geplaatst. Het is een tool die het gesprek over privacy start door abstracte data te veranderen in een spiegel van je digitale identiteit."
         }
     },
     {
@@ -35,8 +35,8 @@ const projectData = [
         image: "images/Camaro.png",
         tags: ["Laravel", "Tailwind"],
         desc: { 
-            en: "A robust automotive platform where the primary challenge was the architecture of access. Beyond the public-facing showcase, the core of the project is a complex administrative ecosystem. I engineered a strict permissions-based backend to ensure sensitive data and management tools remain securely locked behind multi-layered authentication.",
-            nl: "Een robuust automotive platform waarbij de grootste uitdaging lag in de architectuur van toegangsbeheer. Naast de publieke showcase vormt een complex administratief ecosysteem de kern van dit project. Ik heb een strikte, op permissies gebaseerde backend ontwikkeld om te garanderen dat gevoelige data en beheertools veilig vergrendeld blijven achter gelaagde authenticatie."
+            en: "A car platform where the real engine is under the hood. While the frontend looks sharp, the heavy lifting happens in the admin panel. I built a bulletproof permissions system to keep sensitive data locked down, proving that a complex backend can still be elegant and secure.",
+            nl: "Een automotive platform waarbij de echte motor onder de motorkap zit. De voorkant ziet er strak uit, maar het echte werk gebeurt in het admin-paneel. Ik heb een waterdicht permissiesysteem gebouwd om gevoelige data achter slot en grendel te houden. Complex vanbinnen, simpel en veilig vanbuiten."
         }
     },
     {
@@ -45,8 +45,8 @@ const projectData = [
         image: "images/moody-chatbot.png",
         tags: ["Python", "React", "AI", "Tailwind", "Typescript"],
         desc: { 
-            en: "An AI-driven companion designed for emotional intelligence. Moody utilizes Python-based sentiment analysis and a sleek TypeScript/React frontend to track and support psychological well-being. It’s a testament to the power of technology as a tool for empathy, providing users with a safe space for reflection and growth.",
-            nl: "Een AI-gestuurde metgezel ontworpen voor emotionele intelligentie. Moody gebruikt Python-gebaseerde sentimentanalyse en een strakke TypeScript/React-frontend om psychologisch welzijn te monitoren en te ondersteunen. Het is een bewijs van de kracht van technologie als instrument voor empathie en biedt gebruikers een veilige ruimte voor reflectie en groei."
+            en: "An AI companion that actually reads the room. Moody uses Python to analyze sentiment and TypeScript/React to deliver a smooth experience. It’s not just a chatbot; it’s a space for reflection, designed to show that code can be used to build empathy, not just automation.",
+            nl: "Een AI-maatje dat de sfeer aanvoelt. Moody combineert Python-sentimentanalyse met een strakke TypeScript/React-frontend. Geen simpele chatbot, maar een plek voor reflectie. Het is mijn bewijs dat je code kunt gebruiken voor empathie, en niet alleen voor automatisering."
         }
     },
     {
@@ -55,8 +55,8 @@ const projectData = [
         image: "images/signatuuropdracht.png",
         tags: ["HTML", "CSS", "JavaScript"],
         desc: { 
-            en: "A living document of technical growth. Signatuur Opdracht serves as a personal development framework tracking my evolution through the second year of my software engineering studies. It represents the transition from writing code that works to architecting systems that scale, acting as a signature of my personal coding standards and aesthetic progress.",
-            nl: "Een levend document van technische groei. Signatuur Opdracht dient als een framework voor persoonlijke ontwikkeling, waarin mijn evolutie gedurende het tweede jaar van mijn studie Software Engineering wordt bijgehouden. Het vertegenwoordigt de overgang van code die simpelweg werkt naar het architectureren van schaalbare systemen."
+            en: "My personal highlight reel. This isn't just a portfolio; it's a logbook of my evolution from 'making things work' to 'making things scale.' It tracks my progress through year two of Software Engineering, serving as a benchmark for my coding standards and design style.",
+            nl: "Mijn persoonlijke 'highlight reel'. Dit is geen standaard portfolio, maar een logboek van mijn groei. Het laat zien hoe ik ben veranderd van iemand die code 'werkend krijgt' naar iemand die systemen bouwt die schalen. Mijn eigen standaard voor code en design, vastgelegd in één project."
         }
     }
 ];
@@ -68,13 +68,13 @@ const translations = {
         "back-btn": "Back to Overview",
         "philosophy-title": "Core Philosophy",
         "phil-security-head": "Security & Compliance",
-        "phil-security-desc": "In a digital landscape of rising vulnerabilities, I treat data privacy as a non-negotiable human right. Leveraging my legal background, I bridge the gap between complex regulatory requirements (GDPR/Data Privacy) and clean, defensible code. Security isn't a feature; it's the foundation of trust.",
-        "phil-perf-head": "High-Stakes Performance",
-        "phil-perf-desc": "Performance is accessibility. Borrowing from the discipline of emergency response, I prioritize the 'critical path' of user interaction. I build systems designed to perform under pressure, ensuring low latency, high availability, and a seamless experience when it matters most.",
+        "phil-security-desc": "Privacy shouldn't be an afterthought. Thanks to my legal background, I don't just look at the code, but also at the rules behind it. I build systems that are GDPR-proof and secure, because users need to be able to trust that their data is in good hands.",
+        "phil-perf-head": "High-Stakes Workloads",
+        "phil-perf-desc": "Code needs to work, especially when it gets busy. My experience in emergency response taught me to stay calm and focus on what’s essential. I build fast, reliable apps that don’t crash when the pressure is on.",
         "phil-access-head": "Inclusive Architecture",
-        "phil-access-desc": "True innovation leaves no one behind. My certification in Sign Language is a testament to my commitment to non-verbal communication and universal accessibility. I build with WCAG standards at the core, ensuring digital products are intuitive for users of all abilities.",
+        "phil-access-desc": "Great software is for everyone. Whether it’s following WCAG guidelines or using my Sign Language skills, I want to make sure my projects are accessible to all users. Digital products should be inclusive, not a barrier.",
         "hero-title": "Crafting Digital Excellence.",
-        "hero-sub": "I create with the vibel of a craftsman and the precision of an engineer, building scalable, accessible, and exciting web experiences for the modern era.",
+        "hero-sub": "I combine the mindset of a craftsman with the precision of an engineer. I build scalable, accessible web experiences that actually make an impact.",
         "footer-copy": "© 2026 Raven — Developer Portfolio",
         "about-head": "About Me",
         "about-project-head": "About This Project",
@@ -99,13 +99,13 @@ const translations = {
         "back-btn": "Terug naar Overzicht",
         "philosophy-title": "Kernfilosofie",
         "phil-security-head": "Beveiliging & Compliance",
-        "phil-security-desc": "In een digitaal landschap met toenemende kwetsbaarheden beschouw ik privacy als een onvervreemdbaar recht. Dankzij mijn juridische achtergrond sla ik de brug tussen complexe regelgeving en schone, verdedigbare code. Security is geen extra optie; het is het fundament van vertrouwen.",
+        "phil-security-desc": "Privacy is geen extraatje, het is de basis. Door mijn juridische achtergrond kijk ik niet alleen naar de code, maar ook naar de regels eromheen. Ik bouw systemen die AVG-proof en technisch veilig zijn, want een gebruiker moet er simpelweg op kunnen vertrouwen dat data veilig is.",
         "phil-perf-head": "High-Stakes Prestaties",
-        "phil-perf-desc": "Performance is toegankelijkheid. Geïnspireerd door de discipline van noodhulp, geef ik prioriteit aan het 'kritieke pad' van gebruikersinteractie. Ik bouw systemen die presteren onder druk, met lage latentie en hoge beschikbaarheid wanneer het er echt toe doet.",
+        "phil-perf-desc": "Code moet werken, zeker als het druk wordt. Door mijn ervaring in de noodhulp (EHBO) heb ik geleerd om rustig te blijven en te focussen op de essentie. Ik bouw snelle, betrouwbare apps die niet omvallen als het er echt om spant.",
         "phil-access-head": "Inclusieve Architectuur",
-        "phil-access-desc": "Echte innovatie laat niemand achter. Mijn certificering in gebarentaal is het bewijs van mijn toewijding aan non-verbale communicatie en universele toegankelijkheid. Ik ontwikkel met WCAG-normen als uitgangspunt, zodat digitale producten intuïtief zijn voor iedereen.",
+        "phil-access-desc": "Goede software is er voor iedereen. Of het nu gaat om WCAG-richtlijnen of mijn kennis van gebarentaal: ik wil dat mijn projecten voor iedereen toegankelijk zijn. Een digitaal product moet een oplossing zijn, geen drempel.",
         "hero-title": "Digitale Excellentie.",
-        "hero-sub": "Ik creëer met de vibe van een ambachtsman en de precisie van een ingenieur, en bouw schaalbare, toegankelijke en opwindende webervaringen voor het moderne tijdperk.",
+        "hero-sub": "Ik combineer de mindset van een vakman met de precisie van een engineer. Ik bouw schaalbare en toegankelijke webervaringen die écht goed in elkaar zitten.",
         "footer-copy": "© 2026 Raven — Developer Portfolio",
         "about-head": "Over Mij",
         "about-project-head": "Over dit Project",
