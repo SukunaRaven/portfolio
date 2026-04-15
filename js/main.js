@@ -1,14 +1,11 @@
-// Global State
 window.currentLang = localStorage.getItem('lang') || 'en';
 
-// 1. Universal Theme Toggle
 window.toggleTheme = () => {
     const isDark = document.documentElement.classList.toggle('dark');
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
     updateThemeUI();
 };
 
-// 2. Universal Language Toggle
 window.toggleLang = () => {
     const newLang = window.currentLang === 'en' ? 'nl' : 'en';
     localStorage.setItem('lang', newLang);
@@ -48,7 +45,6 @@ function updateFootnotes() {
 }
 
 function init() {
-    // A. Initial Theme Check
     const savedTheme = localStorage.getItem('theme');
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
@@ -58,7 +54,6 @@ function init() {
         document.documentElement.classList.remove('dark');
     }
 
-    // B. Inject Shared Components
     const navCont = document.getElementById('nav-container');
     const footCont = document.getElementById('footer-container');
 
@@ -70,11 +65,9 @@ function init() {
         footCont.innerHTML = components.footer(window.currentLang, footText);
     }
 
-    // C. Load Page Specific Content
     if (document.getElementById('project-grid')) renderHome();
     if (document.getElementById('det-title')) renderDetails();
 
-    // D. Apply Static Translations
     document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
         if (typeof translations !== 'undefined' && translations[window.currentLang][key]) {
@@ -94,12 +87,10 @@ function init() {
         if (percentLabel) percentLabel.innerText = Math.round(scrolled).toString().padStart(2, '0') + "%";
     });
 
-    // E. Sync UI Icons
     updateThemeUI();
     updateFootnotes();
 }
 
-// Update renderHome to show thumbnails on the main page too
 function renderHome() {
     const grid = document.getElementById('project-grid');
     if (!grid || typeof projectData === 'undefined') return;
@@ -121,7 +112,6 @@ function renderHome() {
     if (window.lucide) lucide.createIcons();
 }
 
-// Updated renderDetails for the Hero Header look
 function renderDetails() {
     const params = new URLSearchParams(window.location.search);
     const projectId = params.get('id');

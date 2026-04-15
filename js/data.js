@@ -120,7 +120,7 @@ const translations = {
         "cert-law": "Recht",
         "cert-law-desc": "Kennis van juridische principes en structuren.",
         "cert-ehbo": "EHBO",
-        "cert-ehbo-desc": "Gediplomeerd Eerste Hulp verlener (BHV).",
+        "cert-ehbo-desc": "Gediplomeerd Eerste Hulp verlener (EHBO).",
         "cert-sign": "Gebarentaal",
         "cert-sign-desc": "Het overbruggen van de kloof in non-verbale communicatie."
     }
